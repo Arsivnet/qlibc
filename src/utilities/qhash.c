@@ -106,8 +106,10 @@ bool qhashmd5_file(const char *filepath, off_t offset, ssize_t nbytes,
         return false;
 
     struct stat st;
-    if (fstat(fd, &st) < 0)
+    if (fstat(fd, &st) < 0) {
+        close(fd);
         return false;
+    }
     size_t size = st.st_size;
 
     // check filesize
