@@ -22,14 +22,8 @@ make
 sudo make install
 ```
 
-Alternatively, you can use Cmake. qLibc requires at least GNU99 and confirmed to be compiling in GNU23
+qLibc requires at least GNU99 and confirmed to be compiling in GNU23.
 
-```bash
-mkdir build
-cd build
-cmake ..
-sudo make install
-```
 
 ## API Reference
 
